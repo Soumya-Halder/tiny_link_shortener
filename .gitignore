@@ -1,50 +1,31 @@
-# ───────────────
-# Node / Backend
-# ───────────────
+# Global ignores
+.DS_Store
+*.log
+logs/
+.env
+
+# Node modules (just to be safe, even though subfolders also ignore them)
+node_modules/
+
+# Frontend ignores
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+
+# Backend ignores
 backend/node_modules/
 backend/.env
-backend/.cache
-backend/dist
-backend/logs
-backend/npm-debug.log*
-backend/yarn-debug.log*
-backend/yarn-error.log*
+backend/prisma/generated/
+backend/.DS_Store
 
-# Prisma
-backend/prisma/dev.db
-backend/prisma/dev.db-journal
+# Build artifacts
+**/dist/
+**/build/
 
-
-# ───────────────
-# React / Frontend
-# ───────────────
-frontend/node_modules/
-frontend/.env
-frontend/dist/
-frontend/.vite/
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-
-
-# ───────────────
-# OS Files
-# ───────────────
-.DS_Store
-Thumbs.db
-
-
-# ───────────────
-# Logs
-# ───────────────
-*.log
-*.error
-
-
-# ───────────────
-# IDE
-# ───────────────
+# IDE files
 .vscode/
 .idea/
-*.swp
-*.swo
+
+# OS files
+Thumbs.db
