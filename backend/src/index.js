@@ -10,7 +10,12 @@ const app = express();
 const prisma = new PrismaClient();
 
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://tiny-link-the-url-shortener.vercel.app"
+    ]
+}));
 app.use(express.json());
 
 

@@ -29,7 +29,7 @@ export default function App() {
           </Link>
 
           <div className="flex items-center gap-4">
-            <div className="text-sm text-gray-600 dark:text-gray-300">React · Express · Postgres</div>
+            {/* <div className="text-sm text-gray-600 dark:text-gray-300">React · Express · Postgres</div> */}
 
             <button
               aria-label="Toggle theme"
