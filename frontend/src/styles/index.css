@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth color transitions for theme changes */
+:root {
+    --transition-fast: 150ms;
+    --transition-medium: 300ms;
+}
+
+/* Body / page background handled by component classes, but allow smooth change */
+html,
+body,
+#root {
+    height: 100%;
+    /* color: white */
+}
+
+* {
+    transition: background-color var(--transition-medium), color var(--transition-medium), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Floating label helper */
+.input-wrapper {
+    position: relative;
+}
+
+.input-label {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    font-size: 0.875rem;
+    pointer-events: none;
+    transform-origin: left top;
+    transition: transform 160ms ease, color 160ms ease;
+}
+
+.input-field:focus+.input-label,
+.input-field:not(:placeholder-shown)+.input-label {
+    transform: translateY(-1.25rem) scale(0.85);
+    color: rgba(37, 99, 235, 1);
+    /* blue-600 */
+}
+
+/* Small utility for subtle card hover */
+.card-hover:hover {
+    transform: translateY(-4px) scale(1.002);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+}
+
+/* QR frame */
+.qr-frame {
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.break-words {
+    word-break: break-word;
+}

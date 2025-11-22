@@ -1,0 +1,50 @@
+# ───────────────
+# Node / Backend
+# ───────────────
+backend/node_modules/
+backend/.env
+backend/.cache
+backend/dist
+backend/logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# Prisma
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+
+# ───────────────
+# React / Frontend
+# ───────────────
+frontend/node_modules/
+frontend/.env
+frontend/dist/
+frontend/.vite/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+
+# ───────────────
+# OS Files
+# ───────────────
+.DS_Store
+Thumbs.db
+
+
+# ───────────────
+# Logs
+# ───────────────
+*.log
+*.error
+
+
+# ───────────────
+# IDE
+# ───────────────
+.vscode/
+.idea/
+*.swp
+*.swo
